@@ -23,7 +23,9 @@ while run == 1:
     faces = face_cascade.detectMultiScale(gray, 1.1, 4)
 
     # print number of faces
-    print(len(faces))
+    number_of_faces = len(faces)
+    if number_of_faces > 0:
+        print(number_of_faces)
 
     # wait
-    time.sleep(20)
+    #time.sleep(20)
