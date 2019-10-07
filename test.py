@@ -1,4 +1,5 @@
 import cv2
+import time
 
 # load the cascade
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -16,9 +17,13 @@ while run == 1:
     _, img = cap.read()
 
     # convert to grayscale
-    gray = cv2.cvtColor(img, cv2.Colour_BGR2GRAY)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     # Detect the faces
     faces = face_cascade.detectMultiScale(gray, 1.1, 4)
 
-    # Draw the rectangle around each face
+    # print number of faces
+    print(len(faces))
+
+    # wait
+    time.sleep(20)
