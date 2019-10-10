@@ -10,7 +10,6 @@ cap = cv2.VideoCapture(0)
 # To use a video file as input
 # cap = cv2.VideoCapture('filename.mp4;)
 
-
 run = 1
 while run == 1:
     # read the frame
